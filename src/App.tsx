@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform, MotionValue, useSpring } from "motion/react";
 import React, { useEffect, useMemo, useState, useRef } from "react";
 import confetti from "canvas-confetti";
+import { Heart, Star, Sparkles, Cloud, Music, Moon, Sun, Quote } from "lucide-react";
 
 // Define an array of cute cat colors/patterns
 const catColors = [
@@ -581,12 +582,11 @@ const JellyRevealSection = () => {
       <section className="w-full h-screen shrink-0 relative overflow-hidden bg-white">
          {/* Background Solid Color Layer with Text */}
          <div className="absolute inset-0 flex flex-col justify-center items-start p-6 md:p-16 lg:p-24 z-0">
-            <h1 className="font-cute text-[3rem] sm:text-[4rem] md:text-[6rem] lg:text-[7rem] text-pink-500 leading-[0.9] tracking-tight w-full max-w-6xl opacity-90 drop-shadow-sm">
-               "Oh kyon<br/>nai jaan sake, <br/><span className="text-pink-400">Kinna pyaar<br/>si naal ohde"</span>
+            <h1 className="font-cute text-[3.5rem] sm:text-[4.5rem] md:text-[6.5rem] lg:text-[7.5rem] text-pink-500 leading-tight tracking-widest w-full max-w-6xl opacity-90 drop-shadow-sm uppercase">
+               You carry<br/>so much <span className="text-pink-400">love</span><br/>in your heart
             </h1>
-            <p className="mt-8 text-xl md:text-2xl lg:text-3xl text-pink-400 max-w-3xl font-medium leading-snug drop-shadow-sm font-cute">
-               Why couldn't they see how much love she carried?<br/><br/>
-               This <strong className="text-pink-500">IS</strong> her. Kind-hearted, deep love, but never truly seen.
+            <p className="mt-8 text-2xl md:text-3xl lg:text-4xl text-pink-400 max-w-3xl font-medium leading-relaxed drop-shadow-sm font-cute tracking-wider">
+               — more than most people ever notice.
             </p>
          </div>
 
@@ -633,7 +633,7 @@ const JellyRevealSection = () => {
                   </defs>
 
                   <image 
-                     href="https://images.unsplash.com/photo-1573865526739-10659fec78a5?q=80&w=1080&h=1920&fit=crop" 
+                     href="/b1.jpg" 
                      width="100%" height="100%" 
                      preserveAspectRatio="xMidYMid slice"
                      mask="url(#cat-spotlight)"
@@ -641,6 +641,221 @@ const JellyRevealSection = () => {
                </svg>
             </div>
          </div>
+      </section>
+   )
+}
+
+const StoryCardSection = () => {
+   return (
+      <section className="w-full min-h-screen shrink-0 relative flex items-center justify-center p-6 md:p-12 lg:p-24 bg-[#F3F1EC]">
+         <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="relative w-full max-w-4xl bg-white rounded-3xl md:rounded-[3rem] shadow-xl md:shadow-2xl overflow-hidden p-8 md:p-16 lg:p-20 z-10"
+         >
+            {/* Cute Doodles Background */}
+            <div className="absolute inset-0 pointer-events-none opacity-[0.03] text-[#A86BF5] overflow-hidden">
+               <Heart className="absolute top-10 left-10 w-24 h-24 -rotate-12" />
+               <Star className="absolute bottom-12 right-12 w-32 h-32 rotate-12" />
+               <Sparkles className="absolute top-20 right-20 w-16 h-16" />
+               <Cloud className="absolute bottom-20 left-16 w-28 h-28 opacity-60" />
+               <Music className="absolute top-1/2 left-8 w-12 h-12 -rotate-6" />
+               <Moon className="absolute top-1/2 right-10 w-20 h-20 rotate-45" />
+            </div>
+
+            <div className="relative z-10 flex flex-col items-center text-center">
+               <Quote className="w-12 h-12 text-[#DCB6F5] mb-8" />
+               
+               <p className="font-space text-lg md:text-2xl lg:text-3xl text-[#4A4744] leading-relaxed tracking-wide mb-8">
+                  There's a song that asks — <br/>
+                  <span className="font-cute text-pink-400">oh kyon nai jaan sake, kinna pyaar si naal ohde?</span>
+               </p>
+
+               <div className="w-16 h-[2px] bg-[#DCB6F5] rounded-full mb-8 opacity-50" />
+
+               <p className="font-space text-base md:text-xl lg:text-2xl text-[#6D6A66] leading-relaxed tracking-wide space-y-6">
+                  <span className="block">Why couldn't they ever see<br/>how much love you were carrying?</span>
+                  <span className="block">You gave and gave.<br/>You asked for nothing but love in return.</span>
+                  <span className="block">And some people — they took it,<br/>left a thousand sorrows behind,<br/>and still couldn't see your worth.</span>
+               </p>
+            </div>
+         </motion.div>
+      </section>
+   )
+}
+
+const SecondStoryCardSection = () => {
+   return (
+      <section className="w-full min-h-screen shrink-0 relative flex items-center justify-center p-6 md:p-12 lg:p-24 bg-[#F3F1EC]">
+         <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="relative w-full max-w-4xl bg-white rounded-3xl md:rounded-[3rem] shadow-xl md:shadow-2xl overflow-hidden p-8 md:p-16 lg:p-20 z-10"
+         >
+            {/* Cute Doodles Background */}
+            <div className="absolute inset-0 pointer-events-none opacity-[0.03] text-pink-400 overflow-hidden">
+               <Heart className="absolute top-16 right-10 w-24 h-24 rotate-12" />
+               <Star className="absolute bottom-16 left-12 w-32 h-32 -rotate-12" />
+               <Sparkles className="absolute top-1/2 right-16 w-16 h-16" />
+               <Cloud className="absolute top-8 left-16 w-28 h-28 opacity-60" />
+               <Music className="absolute bottom-1/4 right-8 w-12 h-12 rotate-12" />
+               <Moon className="absolute bottom-8 right-1/4 w-20 h-20 -rotate-12" />
+            </div>
+
+            <div className="relative z-10 flex flex-col items-center text-center">
+               <Heart className="w-12 h-12 text-pink-300 mb-8 fill-pink-300" />
+               
+               <p className="font-space text-lg md:text-2xl lg:text-3xl text-[#4A4744] leading-relaxed tracking-wide mb-8">
+                  That was never about you.<br/>
+                  <span className="font-cute text-[#A86BF5]">That was always about them.</span>
+               </p>
+
+               <div className="w-16 h-[2px] bg-pink-300 rounded-full mb-8 opacity-50" />
+
+               <p className="font-space text-base md:text-xl lg:text-2xl text-[#6D6A66] leading-relaxed tracking-wide space-y-6">
+                  <span className="block">You are one of the rarest souls —<br/>the kind that loves quietly, without condition,</span>
+                  <span className="block">the kind that goes cold only when it has to protect<br/>a heart that already gave too much.</span>
+                  <span className="block font-medium text-pink-400 font-cute text-xl md:text-3xl">People who truly see you, know that.</span>
+               </p>
+            </div>
+         </motion.div>
+      </section>
+   )
+}
+
+const MagicBirthdayWishSection = () => {
+   return (
+      <section className="w-full min-h-screen shrink-0 relative flex flex-col items-center justify-center p-6 md:p-12 lg:p-24 bg-[#0a0a0a] overflow-hidden">
+         {/* Magical Sparkles Background */}
+         <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            {[...Array(30)].map((_, i) => (
+               <motion.div
+                  key={i}
+                  className="absolute rounded-full bg-pink-300 blur-[2px]"
+                  style={{
+                     width: Math.random() * 4 + 2 + 'px',
+                     height: Math.random() * 4 + 2 + 'px',
+                     left: Math.random() * 100 + '%',
+                     top: Math.random() * 100 + '%',
+                  }}
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: Math.random() * 0.6 + 0.2, scale: Math.random() * 0.5 + 0.5 }}
+                  animate={{
+                     y: [0, -50, -100],
+                     opacity: [0, Math.random() * 0.6 + 0.2, 0],
+                  }}
+                  transition={{
+                     duration: Math.random() * 5 + 5,
+                     repeat: Infinity,
+                     ease: "linear",
+                     delay: Math.random() * 5,
+                  }}
+               />
+            ))}
+         </div>
+
+         <motion.div
+            initial={{ opacity: 0, scale: 0.9, filter: 'blur(10px)' }}
+            whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="relative z-10 max-w-4xl text-center space-y-8 md:space-y-12"
+         >
+            <motion.div 
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ delay: 0.5, duration: 1 }}
+               viewport={{ once: true }}
+            >
+               <p className="font-space text-lg md:text-2xl text-gray-300 tracking-wide mb-6">
+                  On your birthday I pray just one thing —
+               </p>
+               <h2 className="font-cute text-[#DCB6F5] text-4xl md:text-6xl lg:text-7xl leading-tight drop-shadow-[0_0_15px_rgba(220,182,245,0.4)]">
+                  tu na kade mere waang mare.
+               </h2>
+            </motion.div>
+
+            <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ delay: 2, duration: 1 }}
+               viewport={{ once: true }}
+               className="space-y-4"
+            >
+               <p className="font-space text-base md:text-xl lg:text-2xl text-gray-300 leading-relaxed tracking-wide">
+                  May you never know that kind of pain again.
+               </p>
+               <p className="font-space text-base md:text-xl lg:text-2xl text-gray-300 leading-relaxed tracking-wide">
+                  Only softness. Only love. Only beautiful things —
+               </p>
+            </motion.div>
+
+            <motion.div
+               initial={{ opacity: 0, scale: 0.5, filter: 'blur(10px)' }}
+               whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+               transition={{ delay: 3.5, duration: 2, type: "spring", bounce: 0.4 }}
+               viewport={{ once: true }}
+               className="font-cute text-pink-400 text-4xl md:text-5xl mt-16 drop-shadow-[0_0_20px_rgba(244,114,182,0.6)] animate-pulse"
+            >
+               from here on. 🎂✨
+            </motion.div>
+         </motion.div>
+      </section>
+   )
+}
+
+const OnceAgainBirthdaySection = () => {
+   return (
+      <section className="w-full min-h-screen shrink-0 relative flex flex-col items-center justify-center p-6 md:p-12 overflow-hidden bg-[#0a0a0a]">
+         {/* Icecream Background Animation */}
+         <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-60">
+            {[...Array(20)].map((_, i) => (
+               <motion.div
+                  key={i}
+                  className="absolute text-5xl md:text-7xl z-0"
+                  style={{
+                     top: Math.random() * 100 + '%',
+                     right: '-10%',
+                  }}
+                  animate={{ 
+                     x: ['0vw', '-120vw'],
+                     y: [0, Math.random() * 60 - 30, Math.random() * -60 + 30, 0],
+                     rotate: [0, Math.random() * 30 - 15, Math.random() * -30 + 15, 0]
+                  }}
+                  transition={{
+                     x: { duration: Math.random() * 10 + 15, repeat: Infinity, ease: "linear", delay: Math.random() * 15 },
+                     y: { duration: Math.random() * 5 + 5, repeat: Infinity, ease: "easeInOut" },
+                     rotate: { duration: Math.random() * 5 + 5, repeat: Infinity, ease: "easeInOut" },
+                  }}
+               >
+                  {Math.random() > 0.5 ? '🍦' : '🍨'}
+               </motion.div>
+            ))}
+         </div>
+
+         {/* Foreground Text */}
+         <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 30 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 1.5, type: "spring", bounce: 0.4 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="relative z-10 text-center flex flex-col items-center justify-center space-y-6"
+         >
+            <h2 className="font-cute text-white text-5xl md:text-7xl lg:text-8xl drop-shadow-md">
+               Once again
+            </h2>
+            <motion.h2 
+               animate={{ y: [0, -10, 0] }}
+               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+               className="font-cute text-pink-400 text-6xl md:text-8xl lg:text-9xl drop-shadow-[0_0_20px_rgba(244,114,182,0.8)]"
+            >
+               happy birthday
+            </motion.h2>
+         </motion.div>
       </section>
    )
 }
@@ -758,6 +973,18 @@ export default function App() {
 
       {/* SECTION 4: Jelly Reveal */}
       <JellyRevealSection />
+
+      {/* SECTION 5: Story Card */}
+      <StoryCardSection />
+
+      {/* SECTION 6: Second Story Card */}
+      <SecondStoryCardSection />
+
+      {/* SECTION 7: Final Birthday Wish */}
+      <MagicBirthdayWishSection />
+
+      {/* SECTION 8: Once again happy birthday */}
+      <OnceAgainBirthdaySection />
 
     </div>
   );
