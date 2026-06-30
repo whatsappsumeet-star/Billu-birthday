@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=DynaPuff:wght@600;700&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Math Donuts';
+  src: url('https://fonts.cdnfonts.com/s/95123/MathDonuts.woff') format('woff');
+}
+
+@theme {
+  --font-playful: "Math Donuts", "Fredoka", sans-serif;
+  --font-cute: "DynaPuff", "Fredoka", cursive;
+}

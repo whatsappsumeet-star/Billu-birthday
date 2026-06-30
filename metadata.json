@@ -1,0 +1,8 @@
+{
+  "name": "Cat Sticker Bouquet",
+  "description": "A smooth animation of cute cat stickers gathering at the center to form a colorful bouquet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
